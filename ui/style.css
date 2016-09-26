@@ -26,7 +26,7 @@ body {
 }
 #mainHeader{
     width:96%;
-    margin: 0% auto;
+    margin: 0px auto;
     height: 120px;
     background-color: #04a046;
     color: aliceblue;
@@ -62,7 +62,7 @@ body {
     height: 50px;
     margin-left:12%;
     border-radius: 35px;
-    background-color: rgba(84, 108, 94, 0.6);
+    background-color: RGBA(84, 108, 94, 0.6);
     position: absolute;
 }
 
