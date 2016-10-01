@@ -1,35 +1,48 @@
 <!doctype html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/ui/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <style>
+            .navbar {
+                padding-top: 15px;
+                padding-bottom: 15px;
+                background-color: cornflowerblue;
+                border: 0;
+                
+                border-radius: 0;
+                margin-bottom: 0;
+                font-size: 12px;
+                letter-spacing: 5px;
+            }
+
+            .navbar-nav li a:hover {
+                    color:red;
+            }
+        </style>
     </head>
     <body>
-        <div id="mainDiv">
-            
-            <div id="mainHeader">
-                <div id="mainLogo"></div>
-                <div id="mainHeading">Be The Learner -<sub>Naveen Kumar Dudi</sub></div>
-                <div id="mainContact">
-                    <ul type="none">
-                        <li>Mob no  : +91-7737473684</li>
-                        <li>Mail-ID : dudi.naveen.05@gmail.com</li>
+        <nav class="navbar navbar-default">
+            <div class="conatiner">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Me</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">WHO</a></li>
+                        <li><a href="#">WHAT</a></li>
+                        <li><a href="#">WHERE</a></li>
                     </ul>
                 </div>
-                <div class="clear"></div>
             </div>
-            <div id="mainMenu">
-                <ul id="mainMenuID">
-                    <li>Home</li>
-                    <li>Educational Details</li>
-                    <li>Hobbies</li>
-                    <li>About Me</li>
-                    <li>Contact</li>
-                </ul>
-            </div>
-            <div id="mainContent"></div>
-            <div id="mainFooter"></div>
-            
-        </div>
+        </nav>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script type="text/javascript" src="/ui/main.js">
         </script>
     </body>
