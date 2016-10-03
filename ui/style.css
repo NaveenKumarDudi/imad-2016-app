@@ -1,86 +1,41 @@
-body {
-    font-family: sans-serif;
-    background-color: lightgrey;
-    margin:0%;
-}
-
-.center {
-    text-align: center;
-}
-
-.text-big {
-    font-size: 300%;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-.img-medium {
-    height: 200px;
+body{
+    margin:0px;
 }
 #mainDiv{
     width:100%;
-    height: 768px;
-    background-image: url('1.jpg');
+    margin:0px;
 }
-#mainHeader{
-    width:96%;
-    margin: 0px auto;
-    height: 120px;
-    background-color: #04a046;
-    color: aliceblue;
-    position: relative;
+#mainPage1{
+    width:100%;
+    height:768px;
+    background-size:cover;
+    background-color: rgba(0,0,0,.75);
 }
-#mainLogo{
-    width:10%;
-    height:100%;
-    margin-left:2%;
-    background-image:url('madi.png');
-    background-size: cover;
-    float: left;
+#pageHeader{
+    width:100%;
+    height:120px;
+    background-color:#58c29e;
+    border: 0px;
+    border-bottom: 2px white groove;
+    border-top: 2px white groove;
+    border-radius: 0px;
 }
-#mainHeading{
-    width: 60%;
-    height: 70px;
-    font-family:monospace;
-    font-weight: 800;
-    font-size: 40px;
-    color: aliceblue;
-    text-align: center;
-    padding-top: 20px;
-    float: left;
-}
-#mainContact{
-    width:25%;
-    padding-top:15px;
-    height:85px;
-    float:left;
-}
-#mainMenu{
-    width:80%;
-    height: 50px;
-    margin-left:12%;
-    border-radius: 35px;
-    background-color: RGBA(84, 108, 94, 0.6);
-    position: absolute;
-}
-
-#mainMenuID li{
-    float:left;
-    color:azure;
+#headerLogo{
+    width:200px;
+    border: 1px white groove;
     width:20%;
+    height:120px;
+    float:left;
 }
-#mainContent{
-    width:80%;
-    
-}
-#mainFooter{
-    width:96%;
-    margin: 0% auto;
-    height:80px;
-    background-color: #55695d;
-    color: aliceblue;
+#headerHeading{
+    width: 30%;
+    float: left;
+    border: 1px white groove;
+    color: white;
+    padding-top:15px;
+    font-size: 42px;
+    font-weight: 400;
+    font-family: sans-serif;
 }
 .clear{
     clear:both;
