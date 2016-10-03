@@ -23,6 +23,7 @@ body{
 #headerLogo{
     width:200px;
     border: 1px white groove;
+    background-image: url("logo.png");
     width:20%;
     height:120px;
     float:left;
