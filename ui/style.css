@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body{
     margin:0px;
 }
@@ -8,8 +11,9 @@ body{
 #mainPage1{
     width:100%;
     height:768px;
-    background-size:cover;
-    background-color: rgba(0,0,0,.75);
+    background-image: url("1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
 #pageHeader{
     width:100%;
@@ -21,20 +25,49 @@ body{
     border-radius: 0px;
 }
 #headerLogo{
-    width:200px;
-    background-image: url("logo.png");
+    margin-left: 5px;
     width:20%;
     height:120px;
+    background-image: url(logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
     float:left;
 }
 #headerHeading{
     width: 30%;
     float: left;
-    color: white;
-    padding-top:15px;
+    text-align: center;
+    color:#fefff4;
+    padding-top:25px;
     font-size: 42px;
     font-weight: 400;
     font-family: sans-serif;
+}
+#mainMenu{
+    width:90%;
+    margin:0px auto;
+    height: 49px;
+    padding-top:1px;
+    margin-top:5px;
+    color:white;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 5px;
+}
+#mainMenuLi li{
+    width:20%;
+    color:white;
+    font-size:16px;
+    border-right:1px white groove;
+    text-align:center;
+    float:left;
+}
+#mainMenuLi li:hover{
+    width:20%;
+    color:white;
+    font-size:18px;
+    border-right:1px white groove;
+    text-align:center;
+    float:left;
 }
 .clear{
     clear:both;
