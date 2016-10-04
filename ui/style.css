@@ -105,29 +105,30 @@ body{
 }
 #homeContent{
     width:80%;
+    padding-top:60px;
     margin:0px auto;
     margin-top:25px;
 }
 #L1{
-    width:35%;
-    height:150px;
+    width:49%;
+    height:200px;
     border:1px white groove;
     background-image:url(resume1.jpg);
-    background-size:contain;
+    background-size:cover;
     background-repeat: no-repeat;
     border-radius: 20px;
     float:left;
 }
 #R1{
-    width:35%;
-    height:150px;
+    width:49%;
+    height:200px;
     border:1px white groove;
     background-image:url(resume.jpeg);
-    background-size:contain;
+    background-size:cover;
     border-radius: 20px;
+    margin-left:15px;
     background-repeat: no-repeat;
     float:left;
-    margin-left:250px;
 }
 #developResume{
      width: 80%;
@@ -138,9 +139,13 @@ body{
 }
 #drHeading{
     width:100%;
-    height:120px;
+   height:100px;
+    padding-top:25px;
     background-color:rgba(0,0,0,.8);
     border: 0px;
+    text-align:center;
+    font-size:32px;
+    color:white;
     border-bottom: 2px white groove;
     border-top: 2px white groove;
     border-radius: 0px;
@@ -154,7 +159,11 @@ body{
 }
 #vsHeading{
     width:100%;
-    height:120px;
+    height:100px;
+    padding-top:25px;
+    text-align:center;
+    font-size:32px;
+    color:white;
     background-color:rgba(0,0,0,.8);
     border: 0px;
     border-bottom: 2px white groove;
@@ -170,9 +179,13 @@ body{
 }
 #csHeading{
     width:100%;
-    height:120px;
+    height:100px;
+    padding-top:25px;
     background-color:rgba(0,0,0,.8);
     border: 0px;
+    text-align:center;
+    font-size:32px;
+    color:white;
     border-bottom: 2px white groove;
     border-top: 2px white groove;
     border-radius: 0px;
@@ -186,12 +199,38 @@ body{
 }
 #auHeading{
     width:100%;
-    height:120px;
+    height:100px;
+    padding-top:25px;
+    text-align:center;
+    font-size:32px;
+    color:white;
     background-color:rgba(0,0,0,.8);
     border: 0px;
     border-bottom: 2px white groove;
     border-top: 2px white groove;
     border-radius: 0px;
+}
+#me{
+    width:200px;
+    height:200px;
+    background-image: url(nav.jpg);
+    border-radius: 60%;
+    margin:0px auto;
+    margin-top:20px;
+    background-size:contain;
+}
+#myName{
+    width:200px;
+    height:50px;
+    color:white;
+    border:1px white groove;
+    background-color: rgba(0,0,0,.6);
+    margin:0px auto;
+    margin-top:10px;
+    border-radius:15px;
+    text-align:center;
+    font-weight:200;
+    padding-top:5px;
 }
 #feedback{
      width: 80%;
@@ -202,7 +241,12 @@ body{
 }
 #fHeading{
     width:100%;
-    height:120px;
+    height:100px;
+    padding-top:25px;
+    text-align:center;
+    font-size:32px;
+    color:white;
+    
     background-color:rgba(0,0,0,.8);
     border: 0px;
     border-bottom: 2px white groove;
