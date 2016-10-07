@@ -1,0 +1,20 @@
+body {
+    padding-top: 60px;
+    backgroun-color:rgba(255,255,255);
+  }
+*{
+  box-sizing: border-box;
+}
+header{
+  background-color:rgb(255, 148, 77);
+  color:white;
+  padding-top:0.1%;
+  padding-bottom:0.3%;
+  border-radius:0;
+}
+header:hover{
+  color:black;
+}
+#home_row{
+  margin-top:.5%;
+}

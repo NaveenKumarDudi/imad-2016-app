@@ -1,74 +1,68 @@
-<html>
+<!DOCTYPE html>
+<html lang=en>
 <head>
-    <link rel="stylesheet" href="ui/style.css"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="ui/max.css"/>
+  <style>
+  </style>
+  <script src="ui/main.js">
+  </script>
 </head>
 <body>
-    <div id="mainDiv">
-        <div id="mainPage1">
-            <div id="pageHeader">
-                <div id="headerLogo"></div>
-                <div id="headerHeading">The Doopers</div>
-                <div class="clear"></div>
+<div class="container-fluid">
+  <nav class="navbar navbar-default navbar-fixed-top" style="background-color:white;">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#header_nav">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Naveen Kumar Dudi</a>
+    </div>
+    <div class="collapse navbar-collapse navbar-right" style="margin-right:3%;" id="header_nav">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#">Professional Skill</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class="container-fluid" id="home">
+  <header class="text-center"><h3>Home</h3></header>
+  <div class="row" style="height:100px;">
+    <div class="col-md-12 col-sm-12 col-xs-12" id="home_row">
+      <div id="Carousel" class="carousel slide">
+        <ol class="carousel-indicators">
+            <li data-target="Carousel" data-slide-to="0" class="active"></li>
+            <li data-target="Carousel" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active center">
+                <img src="ui/wb.jpg">
             </div>
-            <div id="mainMenu">
-                <ul type="none" id="mainMenuLi">
-                    <li style="width:15%;">Home</li>
-                    <li>Develop Resume</li>
-                    <li>View Sample</li>
-                    <li>Contact Us</li>
-                    <li style="border:none;">Feedback</li>
-                </ul>
-            </div>
-            <div id="home">
-                <div id="homeHeading">
-                    Welcome to The Doopers
-                </div>
-                <div id="homeContent">
-                    <div id="L1"></div>
-                    <div id="R1"></div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-            <div id="developResume">
-                <div id="drHeading">
-                    Develop Resume
-                </div>
-                <div id="drBody">
-                    
-                </div>
-            </div>
-            <div id="viewSample">
-                <div id="vsHeading">
-                    View Samples
-                </div>
-            </div>
-            <div id="contactUs">
-                <div id="csHeading">
-                    Contact Us
-                </div>
-            </div>
-            <div id="aboutUs">
-                <div id="auHeading">
-                    About Us
-                </div>
-                <div id="me">
-                </div>
-                <div id="myName">
-                    Naveen Kumar Dudi<br/>
-                    &nbsp;&nbsp;&nbsp;&nbsp;CSE
-                    
-                </div>
-            </div>
-            <div id="feedback">
-                <div id="fHeading">
-                    Feedback
-                </div>
-            </div>
-            <div id="pageFooter">
-                www.thedoopers.in
+            <div class="item center">
+                <img src="ui/c.jpg">
             </div>
         </div>
+
+        <a class="left carousel-control" href="#Carousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#Carousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
     </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid" id="pro">
+  <header>Professional Skill</header>
+</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
-<script src="main.js"></script>
 </html>
