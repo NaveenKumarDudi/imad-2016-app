@@ -1,9 +1,12 @@
 body {
-    padding-top: 100px;
+  //  padding-top: 100px;
     backgroun-color:rgba(255,255,255);
   }
 *{
   box-sizing: border-box;
+}
+@keyframes color{
+
 }
 header{
   background-color:rgb(255, 148, 77);
