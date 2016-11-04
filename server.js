@@ -28,6 +28,9 @@ app.get('/test-db',function(req,res){
 
 //To get index page
 
+app.get('/index.html',function(req,res){
+	res.sendFile(path.join(__dirname,'ui','index.html'));
+});
 
 
 app.get('/about.html',function(req,res){
@@ -49,6 +52,10 @@ app.get('/style.css',function(req,res){
 	res.sendFile(path.join(__dirname,'ui/css','style.css'));
 });
 
+app.get('/max.css',function(req,res){
+	res.sendFile(path.join(__dirname,'ui/css','max.css'));
+});
+
 // to include javascript files
 
 app.get('/main.js',function(req,res){
@@ -67,6 +74,55 @@ app.get('/background.png',function(req,res){
 
 app.get('/logo.png',function(req,res){
 	res.sendFile(path.join(__dirname,'ui/images','logo.png'));
+});
+
+
+// Profile page images inlude path
+
+app.get('/1.jpg',function(req,res){
+	res.sendFile(path.join(__dirname,'ui/images/profile','1.jpg'));
+});
+
+app.get('/c.jpg',function(req,res){
+	res.sendFile(path.join(__dirname,'ui/images/profile','c.jpg'));
+});
+
+app.get('/cp.png',function(req,res){
+	res.sendFile(path.join(__dirname,'ui/images/profile','cp.png'));
+});
+
+app.get('/cpp.png',function(req,res){
+	res.sendFile(path.join(__dirname,'ui/images/profile','cpp.png'));
+});
+
+app.get('/java.png',function(req,res){
+	res.sendFile(path.join(__dirname,'ui/images/profile','java.png'));
+});
+
+app.get('/nav.jpg',function(req,res){
+	res.sendFile(path.join(__dirname,'ui/images/profile','nav.jpg'));
+});
+
+app.get('/python.png',function(req,res){
+	res.sendFile(path.join(__dirname,'ui/images/profile','python.png'));
+});
+
+app.get('/wb.jpg',function(req,res){
+	res.sendFile(path.join(__dirname,'ui/images/profile','wb.jpg'));
+});
+
+app.get('/web.jpg',function(req,res){
+	res.sendFile(path.join(__dirname,'ui/images/profile','web.jpg'));
+});
+
+app.get('/web1.png',function(req,res){
+	res.sendFile(path.join(__dirname,'ui/images/profile','web1.png'));
+});
+
+// profile page response
+
+app.get('/profile.html',function(req,res){
+	res.sendFile(path.join(__dirname,'ui','profile.html'));
 });
 
 //To run Server on following Port
