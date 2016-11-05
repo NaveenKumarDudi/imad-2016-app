@@ -33,6 +33,8 @@
     
 }
   </style>
+  <script lang="javascript" src="main.js">
+  </script>
 </head>
 <body background="1.jpg">
 <div class="xconatiner" style="height:auto; width:100%;">
@@ -71,12 +73,12 @@
 					<h2 class="display-2">Registration Panel</h2>
 				</div>
 				</div>
-		<form method="post">
+		<form method="post" action="register">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="form-group">
 						<label for="username">Username</label>
-						<input type="text" name="username" required placeholder="Username" class="form-control">
+						<input type="text" name="username" required placeholder="Username" id="register_name" class="form-control">
 					</div> 
 				</div>
 			</div>
@@ -84,7 +86,7 @@
 				<div class="col-md-12">
 					<div class="form-group">
 						<label for="Password">Password</label>
-						<input required type="password" name="password" placeholder="Password" class="form-control">
+						<input required type="password" name="password" placeholder="Password" id="register_password" class="form-control">
 					</div> 
 				</div>
 			</div>
@@ -96,14 +98,14 @@
 					</div> 
 				</div>
 			</div>
-			<button type="btn" class="btn btn-primary btn-sm form-control">Register</button>
+			<button type="btn" class="btn btn-primary btn-sm form-control" id="rsubmit">Register</button>
 		</div>
 		</form>
 	</div>
 	<nav class="navbar navbar-inverse navbar-fixed-bottom text-center " style="color:white; padding-top:1%;">
 		<a href="http://naveenkumardudi.imad.hasura-app.io">naveenkumardudi.imad.hasura-app.io</a>
 	</nav>
-<script lang="javascript" src="main.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>

@@ -5,14 +5,19 @@ var Pool = require('pg').Pool;
 var app = express();
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
+
+
 app.use(morgan('combined'));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+
 var config = {
 	user:'naveenkumardudi',
 	database:'naveenkumardudi',
 	host:'db.imad.hasura-app.io',
 	port:'5432',
-	password: process.env.DB_PASSWORD
+	password: 'db-naveenkumardudi-66779'
 };
 
 var pool = new Pool(config);
@@ -39,19 +44,19 @@ app.get('/hash/:input',function(req,res){
 	res.send(hashString);
 });
 
-app.get('/register.html',function(req,res){
-	var username = req.body.username;
-	var password = req.body.password;
+
+app.post('/register', function (req, res) {
+	var user = req.body.username;
+	var pass = req.body.password;
 	var salt = crypto.randomBytes(128).toString('hex');
-	var dbstring = hash(password,salt);
-	pool.query('INSERT INTO "user" (username,password) VALUES($1,$2)',[username,dbstring],function(err,result){
-		if(err){
-			res.status(500).send(err.toString());
-		}
-		else{
-			res.send('Register Successful' + username);
-		}
-	});
+  	var dbString = hash(pass, salt);
+   	pool.query('INSERT INTO "users" (uname, upass) VALUES ($1, $2)', [user, dbString], function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.redirect('Login.html');
+      }
+   });
 });
 
 
