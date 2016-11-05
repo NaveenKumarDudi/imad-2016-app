@@ -3,8 +3,10 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
 var app = express();
+var crypto = require('crypto');
+var bodyParser = require('body-parser');
 app.use(morgan('combined'));
-
+app.use(bodyParser.json());
 var config = {
 	user:'naveenkumardudi',
 	database:'naveenkumardudi',
@@ -24,6 +26,34 @@ app.get('/test-db',function(req,res){
 		}
 	});
 });
+
+function hash(input,salt){
+	var hashed = crypto.pbkdf2Sync(input,salt, 10000, 512, 'sha512');
+	return ['pbkdf2Sync','10000',salt,hashed.toString('hex')].join('$');
+}
+
+// for Login page Post request
+
+app.get('/hash/:input',function(req,res){
+	var hashString = hash(req.params.input,'salt');
+	res.send(hashString);
+});
+
+app.get('/register.html',function(req,res){
+	var username = req.body.username;
+	var password = req.body.password;
+	var salt = crypto.RandomBytes(128).toString('hex');
+	var dbstring = hash(password,salt);
+	pool.query('INSERT INTO "user" (username,password) VALUES($1,$2)',[username,dbstring],function(err,result){
+		if(err){
+			res.status(500).send(err.toString());
+		}
+		else{
+			res.send('Register Successful' + username);
+		}
+	});
+});
+
 
 // footer link
 
