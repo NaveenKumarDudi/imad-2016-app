@@ -11,9 +11,12 @@ body{
 }
 #logo{
 	width:120px;
-	height:60px;
+	height:80px;
+	margin-left:25px;
+	background-image: url('/logo.png');
+	background-repeat: no-repeat;
+	background-size:120px 80px;
 	float:left;
-	padding-left:40px;
 }
 #heading{
 	width:40%;
@@ -25,46 +28,15 @@ body{
 	text-align:left;
 	padding-left:5%;
 }
-#navigation{
-	width:100%;
-	border-bottom:1px white groove;
-	border-top:1px white groove;
-	height:50px;
-	background-color:rgba(0,0,0,.5);
-}
-#navigation li{
-	float:left;
-	width:100px;
-	color:white;
-	padding-top:15px;
-	text-align:left;
-	margin-left:5%;
-}
-#navigation li:hover{
-	font-weight: 900;
-}
-#mainImage{
-	width:80%;
-	margin:0px auto;
-	background-image:url('background.png');
-	background-repeat: repeat-none;
-	height:600px;
-	background-attachment: fixed;
-	background-size:contain;
-	margin-top:20px;
-}
-#register{
-	float:left;
-	text-align:center;
-	width:200px;
-}
-#login{
-	float:left;
-	text-align:center;
-}
 .clear{
 	clear: both;
 }
+#homeImage{
+	background-image: url('background.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.
 input[type="button"]{
 	width:130px;
 	height:30px;

@@ -25,11 +25,28 @@ app.get('/test-db',function(req,res){
 	});
 });
 
+// footer link
+
+app.get('/http://naveenkumardudi.imad.hasura-app.io',function(req,res){
+	res.sendFile(path.join(__dirname,'ui','index.html'));
+});
 
 //To get index page
 
 app.get('/index.html',function(req,res){
 	res.sendFile(path.join(__dirname,'ui','index.html'));
+});
+
+app.get('/login.html',function(req,res){
+	res.sendFile(path.join(__dirname,'ui','login.html'));
+});
+
+app.get('/register.html',function(req,res){
+	res.sendFile(path.join(__dirname,'ui','register.html'));
+});
+
+app.get('/feedback.html',function(req,res){
+	res.sendFile(path.join(__dirname,'ui','feedback.html'));
 });
 
 
