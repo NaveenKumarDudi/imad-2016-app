@@ -5,7 +5,6 @@ var Pool = require('pg').Pool;
 var app = express();
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
-var validate = require('form-validate');
 
 
 app.use(morgan('combined'));
