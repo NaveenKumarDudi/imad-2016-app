@@ -67,7 +67,9 @@ app.get('/http://naveenkumardudi.imad.hasura-app.io',function(req,res){
 });
 
 //To get index page
-
+app.get('/',function(req,res){
+	res.sendFile(path.join(__dirname,'ui','index.html'));
+});
 
 app.get('/index.html',function(req,res){
 	res.sendFile(path.join(__dirname,'ui','index.html'));
