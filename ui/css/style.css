@@ -1,0 +1,153 @@
+
+/*Every Page Design*/
+	* {
+    	box-sizing: border-box;
+	}
+	span{
+		float:right;
+	}
+	#navi{
+		padding-top:12px;
+	}
+	#navi li{
+		margin-left:15px;
+		text-align:center;
+		padding-bottom:4px;
+	}
+	#navi li a{
+		color:white;
+	}
+	#navi ul{
+		margin-left:5%;
+	}
+	.my h1{
+		color:rgb(57, 208, 132);
+		margin-top:15%;
+	}
+	.my h3,p{
+		color:white;
+	}
+	.act{
+		border-radius:35px;
+		background-color:rgba(0,0,0,.2);
+	}
+	#navi li:hover{
+		border-radius:35px;
+		//background-color:rgba(0,0,0,.2);
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.59);
+	}
+.footer {
+	background:#355267;
+	//position: fixed;
+	width: 100%;
+	bottom:0;
+}
+.footer p {
+	margin:20px 0;
+}
+.footer p a {
+	color:#fff;
+	text-decoration:none;
+}
+.footer p a:hover {
+	color:#39d084;
+}
+
+	/*Skill page css*/
+	.myskill h2{
+		color:rgb(57, 208, 132);
+	}
+	.htm{
+
+		background-color:#30a5dc;
+		border-radius:50%;
+		width:100px;
+		height:100px;
+		text-align: center;
+		padding-top:20px;
+	}
+	.htm2{
+		width:95%;
+		background-color:#30a5dc;
+	}
+	.cs{
+
+		background-color:rgb(238, 116, 43);
+		border-radius:50%;
+		width:100px;
+		height:100px;
+		text-align: center;
+		padding-top:20px;
+	}
+	.cs2{
+		width:85%;
+		background-color:rgb(238, 116, 43);
+	}
+	.node{
+
+		background-color:rgb(240, 73, 73);
+		border-radius:50%;
+		width:100px;
+		height:100px;
+		text-align: center;
+		padding-top:20px;
+	}
+	.node2{
+		width:70%;
+		background-color:rgb(240, 73, 73);
+	}
+	.ph{
+
+		background-color:rgb(57, 208, 132);
+		border-radius:50%;
+		width:100px;
+		height:100px;
+		text-align: center;
+		padding-top:20px;
+	}
+	.ph2{
+			background-color:rgb(57, 208, 132);
+			width:90%;
+	}
+	.js{
+
+		background-color:rgb(157, 180, 173);
+		border-radius:50%;
+		width:100px;
+		height:100px;
+		text-align: center;
+		padding-top:20px;
+	}
+	.js2{
+		width:90%;
+		background-color:rgb(157, 180, 173);
+	}
+	.htm:hover, .js:hover, .ph:hover, .cs:hover, .node:hover{
+		border:10px white solid;
+		padding-top:10px;
+	}
+.rowDist{
+	margin-top: 2%;
+	margin-bottom:2%;
+}
+.exp{
+	background-color:#fff;
+	height:16px;
+	border-radius: 50px;
+	position:relative;
+}
+.expand {
+	margin-top:1px;
+	margin-left:2px;
+	border-radius: 14px;
+	height: 14px;
+	position: absolute;
+}
+/* work page css*/
+.mywork h2{
+	color:rgb(57, 208, 132);
+}
+/*resume page css*/
+.myresume h2{
+	color:rgb(57, 208, 132);
+}

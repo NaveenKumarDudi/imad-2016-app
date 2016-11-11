@@ -5,12 +5,12 @@ var Pool = require('pg').Pool;
 var app = express();
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
+var validate = require('form-validate');
 
 
 app.use(morgan('combined'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
 
 var config = {
 	user:'naveenkumardudi',
@@ -48,6 +48,7 @@ app.get('/hash/:input',function(req,res){
 app.post('/register', function (req, res) {
 	var user = req.body.username;
 	var pass = req.body.password;
+	var error = req.body.error;
 	var salt = crypto.randomBytes(128).toString('hex');
   	var dbString = hash(pass, salt);
    	pool.query('INSERT INTO "users" (uname, upass) VALUES ($1, $2)', [user, dbString], function (err, result) {
@@ -68,34 +69,25 @@ app.get('/http://naveenkumardudi.imad.hasura-app.io',function(req,res){
 
 //To get index page
 
+
 app.get('/index.html',function(req,res){
 	res.sendFile(path.join(__dirname,'ui','index.html'));
 });
 
-app.get('/login.html',function(req,res){
-	res.sendFile(path.join(__dirname,'ui','login.html'));
+app.get('/skills.html',function(req,res){
+	res.sendFile(path.join(__dirname,'ui','skills.html'));
 });
 
-app.get('/register.html',function(req,res){
-	res.sendFile(path.join(__dirname,'ui','register.html'));
+app.get('/work.html',function(req,res){
+	res.sendFile(path.join(__dirname,'ui','work.html'));
 });
 
-app.get('/feedback.html',function(req,res){
-	res.sendFile(path.join(__dirname,'ui','feedback.html'));
+app.get('/resume.html',function(req,res){
+	res.sendFile(path.join(__dirname,'ui','resume.html'));
 });
 
-
-app.get('/about.html',function(req,res){
-	res.sendFile(path.join(__dirname,'ui','about.html'));
-});
-
-app.get('/',function(req,res){
-	res.sendFile(path.join(__dirname,'ui','index.html'));
-});
-
-//to get view article page
-app.get('/article.html',function(req,res){
-	res.sendFile(path.join(__dirname,'ui','article.html'));
+app.get('/skills.html',function(req,res){
+	res.sendFile(path.join(__dirname,'ui','skills.html'));
 });
 
 //to include css file
@@ -104,9 +96,6 @@ app.get('/style.css',function(req,res){
 	res.sendFile(path.join(__dirname,'ui/css','style.css'));
 });
 
-app.get('/max.css',function(req,res){
-	res.sendFile(path.join(__dirname,'ui/css','max.css'));
-});
 
 // to include javascript files
 
@@ -116,13 +105,7 @@ app.get('/main.js',function(req,res){
 
 // to include images from image folder
 
-app.get('/1.jpg',function(req,res){
-	res.sendFile(path.join(__dirname,'ui/images','1.jpg'));
-});
 
-app.get('/background.png',function(req,res){
-	res.sendFile(path.join(__dirname,'ui/images','background.png'));
-});
 
 app.get('/logo.png',function(req,res){
 	res.sendFile(path.join(__dirname,'ui/images','logo.png'));
@@ -131,44 +114,8 @@ app.get('/logo.png',function(req,res){
 
 // Profile page images inlude path
 
-app.get('/1.jpg',function(req,res){
-	res.sendFile(path.join(__dirname,'ui/images/profile','1.jpg'));
-});
-
-app.get('/c.jpg',function(req,res){
-	res.sendFile(path.join(__dirname,'ui/images/profile','c.jpg'));
-});
-
-app.get('/cp.png',function(req,res){
-	res.sendFile(path.join(__dirname,'ui/images/profile','cp.png'));
-});
-
-app.get('/cpp.png',function(req,res){
-	res.sendFile(path.join(__dirname,'ui/images/profile','cpp.png'));
-});
-
-app.get('/java.png',function(req,res){
-	res.sendFile(path.join(__dirname,'ui/images/profile','java.png'));
-});
-
 app.get('/nav.jpg',function(req,res){
 	res.sendFile(path.join(__dirname,'ui/images/profile','nav.jpg'));
-});
-
-app.get('/python.png',function(req,res){
-	res.sendFile(path.join(__dirname,'ui/images/profile','python.png'));
-});
-
-app.get('/wb.jpg',function(req,res){
-	res.sendFile(path.join(__dirname,'ui/images/profile','wb.jpg'));
-});
-
-app.get('/web.jpg',function(req,res){
-	res.sendFile(path.join(__dirname,'ui/images/profile','web.jpg'));
-});
-
-app.get('/web1.png',function(req,res){
-	res.sendFile(path.join(__dirname,'ui/images/profile','web1.png'));
 });
 
 // profile page response
