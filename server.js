@@ -16,7 +16,8 @@ var config = {
 	database:'naveenkumardudi',
 	host:'db.imad.hasura-app.io',
 	port:'5432',
-	password: 'db-naveenkumardudi-66779'
+	password: env.process(DB_PASSWORD)
+	password: 'db-naveenkumardudi'
 };
 
 var pool = new Pool(config);
@@ -59,7 +60,25 @@ app.post('/register', function (req, res) {
    });
 });
 
+//-------------Post Request Part ---- ////
+app.post('/contact',function(req,res){
+	var name = req.body.name;
+	var mail = req.body.mail;
+	var web = req.body.web;
+	var msg = req.body.msg;
+	pool.query('INSERT INTO "contact" (name, email, messege, website) VALUES ($1, $2, $3, $4)',[name,mail,web,msg],function (err, result){
+		if(err){
+			res.status(500).send(err.toString());
+		}else{
+			res.redirect('index.html');
+		}
+	});
 
+});
+
+app.get('/resume.pdf',function(req,res){
+	res.sendFile(path.join(__dirname,'ui/resume','resume.pdf'));
+});
 // footer link
 
 app.get('/http://naveenkumardudi.imad.hasura-app.io',function(req,res){

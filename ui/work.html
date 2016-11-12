@@ -29,7 +29,8 @@
 			</div>
 			<div class="collapse navbar-collapse" id="navi" style="color:white;">
 				<ul class="nav navbar-nav">
-		       		<li><a href="index.html" class="glyphicon glyphicon-user"> Profile</a></li>
+					<li><a href="index.html">Home</a></li>
+		       		<li><a href="profile.html" class="glyphicon glyphicon-user"> Profile</a></li>
 			        <li><a href="skills.html" class="glyphicon glyphicon-knight"> Skills</a></li>
 			        <li class="act"><a href="work.html" class="glyphicon glyphicon-pencil"> Work</a></li>
 			        <li><a href="resume.html" class="glyphicon glyphicon-file"> Resume</a></li>		      		
@@ -40,14 +41,41 @@
 <div class="container my mywork">
 	<h2 class="display-1">My Work</h2>
 	<div class="row">
-		
+		<div class="col-md-4">
+			<h3 class="dsplay-1">Article Form Online Submission</h3>
+		</div>
+		<div class="col-md-6">
+			<a href="http://jietjodhpur.ac.in/article.php"><button type="button" class="btn btn-success btn-lg">http://jietjodhpur.ac.in/article.php</button></a>
+		</div>
 	</div>
 </div>
 <div class="footer navbar-fixed-bottom">
 	<div class="container">
 		<p class="pull-left"><a href="naveenkumardudi.imad.hasura-app.io">naveenkumardudi.imad.hasura-app.io</a></p>
-    	<p class="pull-right"><a href="#" class="glyphicon glyphicon-envelope"> CONTACT</a></p>
+    	<p class="pull-right"><button type="button" class="glyphicon glyphicon-envelope btn-link" style="color:white;text-decoration:none;" data-toggle="modal" data-target="#modalContact"> Contact</button></p>
 	</div>
+</div>
+<div class="modal fade" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+  <div class="modal-dialog " role="document">
+    <div class="modal-content">
+    	<div class="modal-header">
+	    	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      	<h4 class="modal-title glyphicon glyphicon-envelope" id="myModalLabel1"> Contact Me</h4>
+	    </div>
+	    <div class="modal-body">
+	    	<form method="post" action="contact">
+	    		<input class="form-control" required placeholder="Yopur Name" type="text"><br/>
+	    		<input class="form-control" required placeholder="Your Email" type="email"><br/>
+	    		<input class="form-control" required placeholder="Website (Optional)" type="text"><br/>
+	    		<textarea class="form-control" rows="3" style="width:80%"></textarea>
+	    		<br/>
+	    		<button type="submit" class="btn btn-success glyphicon glyphicon-send"> SUBMIT</button>
+	    	</form>
+	    </div>
+    </div>
+  </div>
 </div>
 <script src="main.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

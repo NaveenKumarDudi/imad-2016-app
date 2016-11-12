@@ -29,30 +29,52 @@
 			</div>
 			<div class="collapse navbar-collapse" id="navi" style="color:white;">
 				<ul class="nav navbar-nav">
-		       		<li class="act"><a href="index.html" class="glyphicon glyphicon-user"> Profile</a></li>
+					<li class="act"><a href="index.html" class="glyphicon glyphicon-home"> Home</a></li>
+		       		<li><a href="profile.html" class="glyphicon glyphicon-user"> Profile</a></li>
 			        <li><a href="skills.html" class="glyphicon glyphicon-knight"> Skills</a></li>
 			        <li><a href="work.html" class="glyphicon glyphicon-pencil"> Work</a></li>
 			        <li><a href="resume.html" class="glyphicon glyphicon-file"> Resume</a></li>		      		
+			    </ul>
+			    <ul class="nav navbar-nav navbar-right">
+			    	<li><a href="register.html" class="glyphicon glyphicon-user"> SignUp</a></li>
+			    	<li><a href="login.html" class="glyphicon glyphicon-log-in"> LogIn</a></li>
 			    </ul>
 		    </div>
 		</div>
 </nav>
 <div class="container my">
 	<div class="row">
-		<div class="col-md-2 col-md-offset-2 col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-1" style="margin-top:7%;"> <img src="nav.jpg" class="img-responsive img-circle" alt="Profile pic"> </div>
-	  	<div class="col-md-6 col-sm-6 col-xs-10 col-xs-offset-1 col-sm-6">
-	    	<h1 class="display-1">Naveen Kumar</h1>
-	    	<h3 class="display-1">Web &amp; Software Developer</h3>
-	    	<p> Hello I am Naveen Kumar Web and Software Developer from India. If you have something to be done just call my name and I 	will be there. :-) </p>
-	    </div>
+
 	</div>
 </div>
 </div>
 <div class="footer navbar-fixed-bottom">
 	<div class="container">
 		<p class="pull-left"><a href="naveenkumardudi.imad.hasura-app.io">naveenkumardudi.imad.hasura-app.io</a></p>
-    	<p class="pull-right"><a href="#" class="glyphicon glyphicon-envelope"> CONTACT</a></p>
+    	<p class="pull-right"><button type="button" class="glyphicon glyphicon-envelope btn-link" style="color:white;text-decoration:none;" data-toggle="modal" data-target="#modalContact"> Contact</button></p>
 	</div>
+</div>
+<div class="modal fade" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+  <div class="modal-dialog " role="document">
+    <div class="modal-content">
+    	<div class="modal-header">
+	    	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      	<h4 class="modal-title glyphicon glyphicon-envelope" id="myModalLabel1"> Contact Me</h4>
+	    </div>
+	    <div class="modal-body">
+	    	<form method="post" action="contact">
+	    		<input class="form-control" id="name" required placeholder="Yopur Name" type="text"><br/>
+	    		<input class="form-control" id="mail" required placeholder="Your Email" type="email"><br/>
+	    		<input class="form-control" id="web" required placeholder="Website (Optional)" type="text"><br/>
+	    		<textarea class="form-control" id="messege" rows="3" style="width:80%"></textarea>
+	    		<br/>
+	    		<button type="submit" id="contSubmit" class="btn btn-success glyphicon glyphicon-send"> SUBMIT</button>
+	    	</form>
+	    </div>
+    </div>
+  </div>
 </div>
 <script src="main.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

@@ -45,7 +45,7 @@
 .footer p {
 	margin:20px 0;
 }
-.footer p a {
+.footer p a{
 	color:#fff;
 	text-decoration:none;
 }
@@ -144,7 +144,7 @@
 	position: absolute;
 }
 /* work page css*/
-.mywork h2{
+.mywork h2,h3{
 	color:rgb(57, 208, 132);
 }
 /*resume page css*/

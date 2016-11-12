@@ -10,14 +10,14 @@
 <link rel="stylesheet" href="http://localhost:2016/sha1-hash/fontello/css/animation.css" charset="utf-8">
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 <style>
-	body{
+ body{
 		margin:0px;
 		background-color:rgb(32, 55, 72);
 	}
 </style>
 </head>
 <body>
-<nav class="navbar navbar-default" style="background-color:rgb(240, 73, 73);border:none;">
+<nav class="navbar navbar-default " style="background-color:rgb(240, 73, 73);border:none;">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navi">
@@ -30,26 +30,24 @@
 			<div class="collapse navbar-collapse" id="navi" style="color:white;">
 				<ul class="nav navbar-nav">
 					<li><a href="index.html">Home</a></li>
-		       		<li><a href="profile.html" class="glyphicon glyphicon-user"> Profile</a></li>
+		       		<li class="act"><a href="profile.html" class="glyphicon glyphicon-user"> Profile</a></li>
 			        <li><a href="skills.html" class="glyphicon glyphicon-knight"> Skills</a></li>
 			        <li><a href="work.html" class="glyphicon glyphicon-pencil"> Work</a></li>
-			        <li class="act"><a href="resume.html" class="glyphicon glyphicon-file"> Resume</a></li>		      		
+			        <li><a href="resume.html" class="glyphicon glyphicon-file"> Resume</a></li>		      		
 			    </ul>
 		    </div>
 		</div>
 </nav>
-<div class="container my myresume">
-	<h2 class="display-1">My Resume</h2>
+<div class="container my">
 	<div class="row">
-		<div class="col-md-10 col-md-offset-1">
-			<h3 class="display-2">You can download my resume for your reference and I hope that we will meet very soon! :)</h3>
-		</div>
+		<div class="col-md-2 col-md-offset-2 col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-1" style="margin-top:7%;"> <img src="nav.jpg" class="img-responsive img-circle" alt="Profile pic"> </div>
+	  	<div class="col-md-6 col-sm-6 col-xs-10 col-xs-offset-1 col-sm-6">
+	    	<h1 class="display-1">Naveen Kumar</h1>
+	    	<h3 class="display-1">Web &amp; Software Developer</h3>
+	    	<p> Hello I am Naveen Kumar Web and Software Developer from India. If you have something to be done just call my name and I 	will be there. :-) </p>
+	    </div>
 	</div>
-	<div class="row rowDist">
-		<div class="col-md-2 col-md-offset-1">
-			<a href="resume.pdf"><button type="button" class="btn btn-success btn-lg">Download</button></a>
-		</div>
-	</div>
+</div>
 </div>
 <div class="footer navbar-fixed-bottom">
 	<div class="container">
@@ -68,12 +66,12 @@
 	    </div>
 	    <div class="modal-body">
 	    	<form method="post" action="contact">
-	    		<input class="form-control" required placeholder="Yopur Name" type="text"><br/>
-	    		<input class="form-control" required placeholder="Your Email" type="email"><br/>
-	    		<input class="form-control" placeholder="Website (Optional)" type="text"><br/>
-	    		<textarea class="form-control" rows="3" style="width:80%"></textarea>
+	    		<input class="form-control" id="name" required placeholder="Yopur Name" type="text"><br/>
+	    		<input class="form-control" id="mail" required placeholder="Your Email" type="email"><br/>
+	    		<input class="form-control" id="web" required placeholder="Website (Optional)" type="text"><br/>
+	    		<textarea class="form-control" id="messege" rows="3" style="width:80%"></textarea>
 	    		<br/>
-	    		<button type="submit" class="btn btn-success glyphicon glyphicon-send"> SUBMIT</button>
+	    		<button type="submit" id="contSubmit" class="btn btn-success glyphicon glyphicon-send"> SUBMIT</button>
 	    	</form>
 	    </div>
     </div>
