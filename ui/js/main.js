@@ -33,7 +33,7 @@ res.onredystatechange = function(){
 	var cmail = document.getElementById('mail').value;
 	var cweb  = document.getElementById('web').value;
 	var cmsg =  document.getElementById('messege').value;
-	res.open("POST","http://localhost:8080/contact",true);
+	res.open("POST","http://naveenkumardudi.imad.hasura-app.io/contact",true);
 	res.send(JSON.stringify({name:cname,mail:cmail,web:cweb,msg:cmsg}));
 });
 
