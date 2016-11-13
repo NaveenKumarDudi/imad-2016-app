@@ -27,23 +27,24 @@
 			</div>
 			<div class="collapse navbar-collapse" id="navi" style="color:white;">
 				<ul class="nav navbar-nav">
-					<li class="act"><a href="index.html" class="glyphicon glyphicon-home"> Home</a></li>
+					<li><a href="index.html" class="glyphicon glyphicon-home"> Home</a></li>
 		       		<li><a href="profile.html" class="glyphicon glyphicon-user"> Profile</a></li>
 			        <li><a href="skills.html" class="glyphicon glyphicon-knight"> Skills</a></li>
 			        <li><a href="work.html" class="glyphicon glyphicon-pencil"> Work</a></li>
 			        <li><a href="resume.html" class="glyphicon glyphicon-file"> Resume</a></li>		      		
 			    </ul>
 			    <ul class="nav navbar-nav navbar-right">
-			    	<li><a href="register.html" class="glyphicon glyphicon-user" id="login_area"> SignUp / <i class="glyphicon glyphicon-log-in"> Login</i></a></li>
+			    	<li class="act"><a href="register.html" class="glyphicon glyphicon-user" id="login_area"> SignUp / <i class="glyphicon glyphicon-log-in"> Login</i></a></li>
 			    </ul>
 		    </div>
 		</div>
 </nav>
-<div class="container my myarticle">
-	<h2 class="diaplay-1">Login to Submit Article</h2><br/>
-	<input type="submit" value="Refresh" id="refresh_btn" class="btn btn-success">
-	<div class="row">
-
+<div class="container myregister">
+	<div class="jumbotron" style="background-color:rgba(0,0,0,.1);margin-top:5%;margin-bottom:5%;">	
+		<h2 class="display-1 text-center">Register / Login</h2>
+		<div class="container-fluid" id="myform">
+			
+		</div>
 	</div>
 </div>
 </div>
@@ -63,12 +64,14 @@
 	      	<h4 class="modal-title glyphicon glyphicon-envelope" id="myModalLabel1"> Contact Me</h4>
 	    </div>
 	    <div class="modal-body">
+	    	<form method="post" action="contact">
 	    		<input class="form-control" id="name" required placeholder="Yopur Name" type="text"><br/>
 	    		<input class="form-control" id="mail" required placeholder="Your Email" type="email"><br/>
 	    		<input class="form-control" id="web" required placeholder="Website (Optional)" type="text"><br/>
 	    		<textarea class="form-control" id="messege" rows="3" style="width:80%"></textarea>
 	    		<br/>
-	    		<input type="submit" id="contSubmit" class="btn btn-primary" value="Send">
+	    		<button type="submit" id="contSubmit" class="btn btn-success glyphicon glyphicon-send"> SUBMIT</button>
+	    	</form>
 	    </div>
     </div>
   </div>

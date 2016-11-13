@@ -3,14 +3,14 @@
 	* {
     	box-sizing: border-box;
 	}
-	span{
+	.myskill span{
 		float:right;
 	}
 	#navi{
 		padding-top:12px;
 	}
 	#navi li{
-		margin-left:15px;
+	
 		text-align:center;
 		padding-bottom:4px;
 	}
@@ -33,7 +33,6 @@
 	}
 	#navi li:hover{
 		border-radius:35px;
-		//background-color:rgba(0,0,0,.2);
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.59);
 	}
 .footer {
@@ -149,5 +148,14 @@
 }
 /*resume page css*/
 .myresume h2{
+	color:rgb(57, 208, 132);
+}
+.myregister h2{
+	color:rgb(57, 208, 132);
+}
+.mylogin h2{
+	color:rgb(57, 208, 132);
+}
+.myarticle h2{
 	color:rgb(57, 208, 132);
 }

@@ -29,11 +29,14 @@
 			</div>
 			<div class="collapse navbar-collapse" id="navi" style="color:white;">
 				<ul class="nav navbar-nav">
-					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html" class="glyphicon glyphicon-home"> Home</a></li>
 		       		<li class="act"><a href="profile.html" class="glyphicon glyphicon-user"> Profile</a></li>
 			        <li><a href="skills.html" class="glyphicon glyphicon-knight"> Skills</a></li>
 			        <li><a href="work.html" class="glyphicon glyphicon-pencil"> Work</a></li>
-			        <li><a href="resume.html" class="glyphicon glyphicon-file"> Resume</a></li>		      		
+			        <li><a href="resume.html" class="glyphicon glyphicon-file"> Resume</a></li>	      		
+			    </ul>
+			    <ul class="nav navbar-nav navbar-right">
+			    	<li><a href="register.html" class="glyphicon glyphicon-user" id="login_area"> SignUp / <i class="glyphicon glyphicon-log-in"> Login</i></a></li>
 			    </ul>
 		    </div>
 		</div>
@@ -71,13 +74,15 @@
 	    		<input class="form-control" id="web" required placeholder="Website (Optional)" type="text"><br/>
 	    		<textarea class="form-control" id="messege" rows="3" style="width:80%"></textarea>
 	    		<br/>
-	    		<button type="submit" id="contSubmit" class="btn btn-success glyphicon glyphicon-send"> SUBMIT</button>
+	    		<button type="submit" id="contSubmit" class="btn btn-success glyphicon glyphicon-send" onclick="contact()"> SUBMIT</button>
 	    	</form>
 	    </div>
     </div>
   </div>
 </div>
-<script src="main.js"></script>
+<script src="main.js">
+	
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
