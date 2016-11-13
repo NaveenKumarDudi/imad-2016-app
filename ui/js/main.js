@@ -120,7 +120,7 @@ var submit = document.getElementById('login_btn');
     		}
     	};
     	request.open("GET","/index", true);
-    	ref.value="REfreshing ....";
+    	ref.value="Refreshing ....";
     };
     
 

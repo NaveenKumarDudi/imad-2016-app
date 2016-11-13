@@ -166,22 +166,6 @@ app.get('/index.html',function(req,res){
 	res.sendFile(path.join(__dirname,'ui','index.html'));
 });
 
-app.get('/skills.html',function(req,res){
-	res.sendFile(path.join(__dirname,'ui','skills.html'));
-});
-
-app.get('/work.html',function(req,res){
-	res.sendFile(path.join(__dirname,'ui','work.html'));
-});
-
-app.get('/resume.html',function(req,res){
-	res.sendFile(path.join(__dirname,'ui','resume.html'));
-});
-
-app.get('/skills.html',function(req,res){
-	res.sendFile(path.join(__dirname,'ui','skills.html'));
-});
-
 //to include css file
 
 app.get('/style.css',function(req,res){
@@ -209,25 +193,6 @@ app.get('/logo.png',function(req,res){
 app.get('/nav.jpg',function(req,res){
 	res.sendFile(path.join(__dirname,'ui/images/profile','nav.jpg'));
 });
-
-// profile page response
-
-app.get('/profile.html',function(req,res){
-	res.sendFile(path.join(__dirname,'ui','profile.html'));
-});
-
-app.get('/login.html',function(req,res){
-	res.sendFile(path.join(__dirname,'ui','login.html'));
-});
-
-app.get('/register.html',function(req,res){
-	res.sendFile(path.join(__dirname,'ui','register.html'));
-});
-
-app.get('/test.html',function(req,res){
-	res.sendFile(path.join(__dirname,'ui','test.html'));
-});
-
 
 //To run Server on following Port
 var port = 8080;

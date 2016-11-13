@@ -159,3 +159,7 @@
 .myarticle h2{
 	color:rgb(57, 208, 132);
 }
+
+#mywork, #myprofile, #myresume, #myskills, #myarticle{
+	height:768px;
+}
