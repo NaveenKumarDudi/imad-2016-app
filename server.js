@@ -17,7 +17,7 @@ var config = {
 	database:'naveenkumardudi',
 	host:'db.imad.hasura-app.io',
 	port:'5432',
-	password: "db-naveenkumardudi-66779"
+	password: process.env.DB_PASSWORD
 	
 };
 app.use(session({
@@ -146,15 +146,56 @@ app.get('/index',function(req, res){
 	});
 });
 
+// ------------ Article page Template ----------///
+
+function template(data){
+	var title = data.title;
+	var heading = data.heading;
+	var content = data.content;
+	var comment = data.comment;
+
+	var temp = `
+			<div class="col-md-4"><h3 class="display-1" style="color:white">${heading}</h3></div></div>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">${content}</div>
+			</div>
+			<div class="row">
+				<h3 class="display-1" style="color:white;">Comment</h3>
+				<div class="col-md-2 col-md-offset-2">
+
+				</div>
+				<div class="col-md-6 col-md-offset-2">
+				</div>
+			</div>
+
+	`;
+	return temp;
+}
+
+
+app.get('index.html',function(req, res){
+
+	pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], function (err, result) {
+    if (err) {
+        res.status(500).send(err.toString());
+    } else {
+        if (result.rows.length === 0) {
+            res.status(404).send('Article not found');
+        } else {
+            var articleData = result.rows[0];
+            res.send(createTemplate(articleData));
+        }
+    }
+  });
+})  ;
+
+
 
 app.get('/resume.pdf',function(req,res){
 	res.sendFile(path.join(__dirname,'ui/resume','resume.pdf'));
 });
 // footer link
 
-app.get('/http://naveenkumardudi.imad.hasura-app.io',function(req,res){
-	res.sendFile(path.join(__dirname,'ui','index.html'));
-});
 
 //To get index page
 app.get('/',function(req,res){
@@ -171,6 +212,10 @@ app.get('/index.html',function(req,res){
 app.get('/style.css',function(req,res){
 	res.sendFile(path.join(__dirname,'ui/css','style.css'));
 });
+app.get('/style1.css',function(req,res){
+	res.sendFile(path.join(__dirname,'ui/css','style1.css'));
+});
+
 
 
 // to include javascript files
@@ -194,6 +239,44 @@ app.get('/nav.jpg',function(req,res){
 	res.sendFile(path.join(__dirname,'ui/images/profile','nav.jpg'));
 });
 
+
+//  prev build
+
+app.get('/ui/style1.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'style1.css'));
+});
+app.get('/max.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/css', 'max.css'));
+});
+app.get('/web.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/images/profile', 'web.jpg'));
+});
+app.get('/web1.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/images/profile', 'web1.png'));
+});
+app.get('/cp.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/images/profile', 'cp.png'));
+});
+app.get('/python.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/images/profile', 'python.png'));
+});
+app.get('/java.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/images/profile', 'java.png'));
+});
+app.get('/cpp.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/images/profile', 'cpp.png'));
+});
+app.get('/wb.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/images/profile', 'wb.jpg'));
+});
+
+app.get('/c.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/images/profile', 'c.jpg'));
+});
+
+app.get('/prev.html',function(req, res){
+	res.sendFile(path.join(__dirname,'ui','prev.html'));
+});
 //To run Server on following Port
 var port = 8080;
 app.listen(8080,function(){

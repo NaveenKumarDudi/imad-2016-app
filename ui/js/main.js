@@ -61,7 +61,7 @@ var submit = document.getElementById('login_btn');
               if (request.status === 200) {
                   submit.value = 'Sucess!';
               } else if (request.status === 403) {
-                  submit.value = 'Invalid credentials. Try again?';
+                  alert('Invalid credentials. Try again?');
               } else if (request.status === 500) {
                   alert('Something went wrong on the server');
                   submit.value = 'Login';
@@ -106,29 +106,20 @@ var submit = document.getElementById('login_btn');
     	req.setRequestHeader('Content-Type', 'application/json');
     	req.send(JSON.stringify({name: name, mail: mail, web: web, msg: msg}));
     };
-    //  main article page
-    var ref = document.getElementById('refresh_btn');
-    ref.onclick = function(){
-    	var request = new XMLHttpRequest();
-    	if(request.status === XMLHttpRequest.DONE){
-    		if(request.status === 200){
-    			ref.value = "Loaded";
-
-    		}
-    		else{
-    			ref.value = "Try Again";
-    		}
-    	};
-    	request.open("GET","/index", true);
-    	ref.value="Refreshing ....";
-    };
-    
-
 }
 function loadLoggedInUser (username) {
     var loginArea = document.getElementById('login_area');
     loginArea.innerHTML = `
         <a href="/logout">Logout</a>
+    `;
+    var submitArticle = document.getElementById('subArticle');
+    submitArticle.innerHTML = `
+    	<div class="jumbotron" style="margin-top:15px; background-color:rgba(0,0,0,.2);">
+		<input type="text" id="title" placeholder="Title" class="form-control"><br/>
+		<input type="text" id="heading" placeholder="Heading" class="form-control"><br/>
+		<textarea class="form-control" id="content" placeholder="Content"></textarea><br/>
+		<input type="submit" class="btn btn-primary" id="subart" value="Submit"><br/>
+	</div>
     `;
 }
 
